@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Helmet } from "react-helmet";
 import styles from "../Component-Style/Products.module.css";
 import { useNavigate } from "react-router-dom";
-import productPage from "../assets/product-Page.jpg";
+import productPage from "../assets/product-page.jpg";
 import productOne from "../assets/product-one.jpg";
 import productTwo from "../assets/product-two.jpg";
 import productThree from "../assets/product-three.jpg";
