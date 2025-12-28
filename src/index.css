@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("./assets/fonts/PlayfairDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/Lato-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dancing Script";
+  src: url("./assets/fonts/DancingScript-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Lato", sans-serif;
+  --font-motive: "Dancing Script", cursive;
+
+  --clr-background: #78b9b5; /*Background Clr */ /**/
+  --clr-title: #002b5b; /*h3,h2 Section Title, Footer background, */
+  --clr-brand: #320a6b; /*Brand Title, Button*/
+  --clr-shadow: #e50046; /*Shadow for title, Hover Button shadow*/
+  --clr-quote: #ffffff;
+  --clr-para: #333; /*or 555*/
+  --clr-footer: #76aa35; /*or #8bc53f*/
+  --clr-error: red; /*error, delete button*/
+  --clr-success: green;
+  --clr-black: black;
+  color-scheme: light;
+
+  /* global.css */
+  color-scheme: light;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-family: var(--font-motive);
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: var(--font-body);
+}

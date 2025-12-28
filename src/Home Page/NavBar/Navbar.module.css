@@ -1,0 +1,278 @@
+/* Navbar container */
+.nav {
+  background-color: var(--clr-background);
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+/* Logo + Business Name section */
+.logoTitle {
+  display: flex;
+  align-items: center;
+  font-size: 5rem;
+}
+
+.logoTitle img {
+  height: 90px;
+  width: auto;
+}
+
+.businessName {
+  margin-left: 12px;
+  font-size: 38px;
+  font-weight: bolder;
+  color: var(--clr-brand);
+  font-family: var(--font-brand);
+}
+
+/*  Navigation links */
+.navList li {
+  display: inline-block;
+  margin: 5px 5px;
+  font-size: 22px;
+  margin-left: 18px;
+  font-weight: bolder;
+  position: relative; /* required for dropdown positioning */
+}
+
+.navList a {
+  text-decoration: none;
+  color: var(--clr-brand);
+  transition: color 0.3s ease;
+}
+
+.navList a:hover {
+  color: var(--clr-quote);
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown button (clickable trigger) */
+.dropbtn {
+  background: none;
+  border: none;
+  font: inherit;
+  color: var(--clr-brand);
+  font-weight: bolder;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.dropbtn:hover {
+  color: var(--clr-quote);
+}
+
+/* Dropdown menu — perfectly centered under button */
+.dropdownMenu {
+  position: absolute;
+  top: 45px; /* adds small vertical gap below button */
+  left: 50%; /* position from the middle of button */
+  transform: translateX(-50%); /* center-align horizontally */
+  background-color: var(--clr-quote);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 8px 0;
+  width: 230px;
+  z-index: 10;
+}
+
+/*  Dropdown list items */
+.dropdownMenu li {
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.dropdownMenu li a {
+  text-decoration: none;
+  color: var(--clr-brand);
+  display: block;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdownMenu li a:hover {
+  color: var(--clr-black);
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* Popup Overlay */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Box */
+.popupBox {
+  background: var(--clr-quote);
+  color: var(--clr-para);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 580px;
+  height: 300px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  /* animation: fadeIn 0.3s ease-in-out; */
+}
+
+.popupBox h3 {
+  margin-bottom: 1.5rem;
+  color: var(--clr-title);
+  font-size: 2rem;
+}
+
+.popupBox p {
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.passwordInput {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--clr-para);
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.popupButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submitBtn,
+.cancelBtn {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.submitBtn {
+  background: var(--clr-title);
+  color: var(--clr-quote);
+}
+
+.cancelBtn {
+  background: var(--clr-title);
+  color: var(--clr-quote);
+}
+
+.submitBtn:hover {
+  box-shadow: 0 0 10px var(--clr-shadow);
+}
+
+.cancelBtn:hover {
+  box-shadow: 0 0 10px var(--clr-shadow);
+}
+
+.errorMsg {
+  color: var(--clr-error);
+  font-size: 13px;
+  margin-top: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hamburger {
+  display: none;
+}
+/* ----------------- MOBILE RESPONSIVE ----------*/
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--clr-brand);
+  }
+
+  .navList {
+    display: none;
+    flex-direction: column;
+    background: #a9ccca;
+    width: 100%;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    padding: 20px 0;
+    gap: 20px;
+    text-align: center;
+    z-index: 200;
+  }
+
+  /* Show menu when active */
+  .showMenu {
+    display: flex;
+  }
+
+  .nav {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .logoTitle {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .businessName {
+    font-size: 24px;
+    text-align: center;
+    /* margin-left: 3px; */
+  }
+
+  .logoTitle img {
+    height: 70px;
+    width: auto;
+  }
+}
+/* Hide desktop dropdown on mobile */
+@media (max-width: 1024px) {
+  .dropdown {
+    display: none;
+  }
+
+  /* Mobile dropdown inside list  */
+  .dropdownInsideMobile {
+    display: block;
+  }
+
+  .dropdownMenuMobile {
+    background: var(--clr-quote);
+    padding: 10px 0;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+
+  .dropdownMenuMobile li {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,119 @@
+.processSection {
+  text-align: center;
+  margin: auto;
+  background: linear-gradient(
+    0deg,
+    var(--clr-quote),
+    var(--clr-background),
+    var(--clr-quote)
+  );
+  padding: 3rem 0; /* slightly more space */
+}
+
+.workTitle h3 {
+  color: var(--clr-title);
+  font-size: 2.5rem; /* slightly bigger */
+}
+
+.workTitle h2 {
+  margin-top: 0.5rem;
+  text-align: center;
+  text-shadow: 1px 2px 2px var(--clr-shadow);
+  font-size: 2rem;
+}
+
+.description {
+  text-align: center;
+}
+
+.processContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* evenly spread */
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.step {
+  flex: 1 1 20%; /* keeps 4 in a row */
+  margin: auto;
+}
+
+.circle {
+  position: relative;
+  width: 200px; /* was 120px → slightly bigger */
+  height: 200px;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle span {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: var(--clr-title);
+  color: var(--clr-quote);
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+}
+
+.circle img {
+  width: 160px; /* match circle size */
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.step h2 {
+  margin: 2px;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+.step p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.75rem;
+  color: var(para);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .processContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem;
+  }
+
+  .step {
+    flex: 1 1 100% !important; /* FULL width */
+    max-width: 90%; /* slightly smaller than full screen */
+  }
+
+  .circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circle img {
+    width: 130px;
+    height: 130px;
+  }
+}
+.workTitle h3 {
+  font-size: 2.2rem; /* Reduced for mobile */
+}
+
+.workTitle h2 {
+  font-size: 1.8rem; /* Reduced for mobile */
+}
+
+.description {
+  font-size: 1.3rem;
+}

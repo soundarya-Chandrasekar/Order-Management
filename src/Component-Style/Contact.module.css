@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contactUsPage {
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.65)),
+    url("../assets/contact-bg.jpg") no-repeat center/cover;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.contactFormContainer {
+  background: linear-gradient(0deg, var(--clr-background), var(--clr-quote));
+  padding: 2rem;
+  border-radius: 15px;
+  width: 40%;
+  box-shadow: 0 0 15px var(--clr-background);
+  transform: scale(0.82);
+  /* Zoomed out look */
+  margin: auto;
+}
+
+.inputGroup {
+  /* display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8rem; */
+  margin-bottom: 1.5rem; /* space between fields */
+}
+
+.contactTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--clr-title);
+  font-size: 2.5rem;
+}
+
+.contactLabel {
+  display: block;
+  margin-top: 0.8rem;
+  margin-bottom: 8px; /* increase this from 5px to 8px for better spacing */
+  font-weight: bold;
+  color: var(--clr-para);
+  font-size: 24px;
+}
+
+.contactInput,
+.contactTextarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--clr-background);
+  border-radius: 8px;
+  outline: none;
+  font-size: 1.3rem;
+  margin-bottom: 5px; /* ensures consistent spacing before .error message */
+}
+
+.checkboxOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  /* space between each option */
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--clr-para);
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.checkboxSection {
+  margin-bottom: 1rem;
+}
+
+.contactTextarea {
+  resize: vertical;
+  line-height: 1.3;
+}
+
+.centerButton {
+  text-align: center;
+}
+
+.contactButton {
+  width: 50%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 15px;
+  background: var(--clr-title);
+  color: var(--clr-quote);
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contactButton:hover {
+  box-shadow: 0 0 10px var(--clr-shadow);
+}
+
+.contactButton i {
+  margin-right: 8px;
+}
+
+.error {
+  color: var(--clr-error);
+  font-size: 15px;
+  margin-top: 2px;
+  display: block;
+}
+
+.inputGroup.success .contactInput,
+.inputGroup.success .contactTextarea {
+  border-color: var(--clr-success);
+}
+
+.inputGroup.error .contactInput,
+.inputGroup.error .contactTextarea {
+  border-color: var(--clr-error);
+}
+
+/* ============================
+   TABLET (max-width: 1024px)
+   ============================ */
+@media (max-width: 1024px) {
+  .contactFormContainer {
+    width: 70%;
+    transform: scale(0.9);
+  }
+
+  .contactLabel {
+    font-size: 20px;
+  }
+
+  .contactInput,
+  .contactTextarea {
+    font-size: 1.1rem;
+  }
+
+  .contactButton {
+    width: 60%;
+    font-size: 1.3rem;
+  }
+}
+
+/* ============================
+   MOBILE (max-width: 768px)
+   ============================ */
+@media (max-width: 768px) {
+  .contactUsPage {
+    padding: 2rem 1rem;
+  }
+
+  .contactFormContainer {
+    width: 100%;
+    transform: none; /* remove zoom on mobile */
+    padding: 1.5rem;
+  }
+
+  .contactTitle {
+    font-size: 2rem;
+  }
+
+  .contactLabel {
+    font-size: 18px;
+  }
+
+  .contactInput,
+  .contactTextarea {
+    font-size: 1rem;
+  }
+
+  .checkboxOptions {
+    gap: 0.6rem;
+  }
+
+  .checkboxItem {
+    font-size: 1rem;
+  }
+
+  .contactButton {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+
+/* ============================
+   SMALL MOBILE (max-width: 480px)
+   ============================ */
+@media (max-width: 480px) {
+  .contactTitle {
+    font-size: 1.7rem;
+  }
+
+  .contactLabel {
+    font-size: 16px;
+  }
+
+  .contactInput,
+  .contactTextarea {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+
+  .contactButton {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+}
+
+.checkboxOptions {
+  gap: 0.6rem;
+}

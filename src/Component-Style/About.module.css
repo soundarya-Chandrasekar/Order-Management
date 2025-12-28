@@ -1,0 +1,152 @@
+.aboutSection {
+  width: 100%;
+  background-color: var(--clr-quote);
+}
+
+/* Divider section */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.dividerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /* color: black; */
+  z-index: 2;
+}
+
+.text h2 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--ff-head);
+  text-shadow: 2px 2px 8px var(--clr-shadow);
+  color: var(--clr-quote);
+}
+
+/* About section layout */
+.aboutContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.aboutImg,
+.aboutInfo {
+  width: 100%;
+  padding: 1rem;
+}
+
+.aboutPicContainer {
+  width: 40vw;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-left: 5rem;
+}
+
+.aboutPic {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.aboutPicContainer:hover .aboutPic {
+  transform: scale(1.2);
+  opacity: 0.6;
+}
+
+.aboutBody {
+  max-width: 50rem;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+}
+
+.para {
+  margin-bottom: 1.75rem;
+  line-height: 1.8;
+  color: var(--clr-para);
+}
+
+.sectionTitle {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle h2 {
+  text-shadow: 1px 2px 2px var(--clr-shadow);
+  font-size: 2rem;
+  
+}
+
+.sectionTitle h3 {
+  color: var(--clr-title);
+  font-size: 2.5rem;
+}
+
+/* Responsive design */
+@media screen and (min-width: 992px) {
+  .aboutImg,
+  .aboutInfo {
+    width: 50%;
+  }
+
+  .aboutInfo {
+    padding-left: 2rem;
+  }
+}
+
+/* Mobile Responsive (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  /* Make about image bigger */
+  .aboutPicContainer {
+    width: 90vw; /* Bigger image */
+    margin: 0 auto 1.5rem; /* Center the image */
+    border-radius: 12px;
+    margin-bottom: 0.4rem;
+  }
+
+  .aboutPic {
+    width: 100%;
+  }
+
+  /* Center titles */
+  .sectionTitle {
+    text-align: center;
+  }
+
+  .sectionTitle h3 {
+    font-size: 2.2rem; /* Reduced for mobile */
+  }
+
+  .sectionTitle h2 {
+    font-size: 1.8rem; /* Reduced for mobile */
+  }
+
+  /* Adjust paragraph text */
+  .aboutBody {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 100%;
+    text-align: left;
+    padding: 0 1rem;
+  }
+
+  /* Add spacing */
+  .aboutContainer {
+    padding: 2rem 0;
+  }
+}

@@ -1,0 +1,133 @@
+/* Full page background image */
+.orderHistoryPage {
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.65)),
+    url("../assets/bg.jpg") no-repeat center center;
+  min-height: 100vh;
+  padding: 2rem 1rem; /* ✅ adds 1rem gap on left & right sides */
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  color: var(--clr-title);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* When no orders */
+.noOrder {
+  text-align: center;
+  color: var(--clr-para);
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+/* Orders Table */
+.ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--clr-quote);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table cells */
+.ordersTable th,
+.ordersTable td {
+  border: 1px solid var(--clr-black);
+  padding: 10px;
+  text-align: center;
+}
+
+/* Table header */
+.ordersTable th {
+  background: var(--clr-brand);
+  color: var(--clr-quote);
+}
+
+/* Delete button */
+.deleteBtn {
+  background: var(--clr-error);
+  color: var(--clr-quote);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.deleteBtn:hover {
+  opacity: 0.85;
+}
+
+/* ===========================
+   TABLET (max-width: 1024px)
+   =========================== */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 1.7rem;
+  }
+
+  .ordersTable th,
+  .ordersTable td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+/* ===========================
+   MOBILE (max-width: 768px)
+   =========================== */
+@media (max-width: 768px) {
+  .orderHistoryPage {
+    padding: 1rem 0.5rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  /* Enable horizontal scroll */
+  .ordersTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .ordersTable th,
+  .ordersTable td {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .deleteBtn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
+/* ===========================
+   SMALL MOBILE (max-width: 480px)
+   =========================== */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.3rem;
+  }
+
+  .ordersTable th,
+  .ordersTable td {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .deleteBtn {
+    font-size: 11px;
+  }
+}

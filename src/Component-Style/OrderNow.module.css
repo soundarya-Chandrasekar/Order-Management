@@ -1,0 +1,273 @@
+.formHeading {
+  position: relative;
+  top: -30px; /* 🔹 moves the heading upward */
+  margin-bottom: 0.2rem; /* space between heading and form */
+  text-align: center;
+  color: var(--clr-title);
+  font-weight: 400;
+  z-index: 10;
+}
+
+/* Center the entire form + heading area */
+.orderNowPage {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(255, 255, 255, 0.4),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("../assets/bg.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* --- Increase the form container width --- */
+.background {
+  position: relative; /* allows absolute child positioning */
+  overflow: visible; /* make sure heading isn’t cut off */
+  background: linear-gradient(0deg, var(--clr-background), var(--clr-quote));
+  padding: 2rem;
+  border-radius: 35px;
+  width: 90%; /* 🔹 increased from 95% to 90% of screen width */
+  max-width: 1500px; /* 🔹 increased overall width */
+  box-shadow: 0 0 10px var(--clr-background);
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* -------- Form Layout -------- */
+.orderFormContainer .formRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Always 4 columns for first 3 rows */
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------- Heading -------- */
+.formHeading {
+  text-align: center;
+  margin-top: 4rem;
+  color: var(--clr-title);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+/* --- Input, Select, Textarea Styling --- */
+.inputField,
+.textareaField,
+.selectField {
+  width: 100%;
+  padding: 2px 0;
+  font-size: 0.9rem;
+  border: none;
+  border-bottom: 2px solid var(--clr-background); /* bottom border only */
+  outline: none;
+  background-color: transparent; /* remove white background */
+  color: var(--clr-black); /* keep text readable */
+}
+
+/* --- Optional: focus effect for better UI --- */
+.inputField:focus,
+.textareaField:focus,
+.selectField:focus {
+  border-bottom-color: var(--clr-title);
+  transition: border-color 0.3s ease;
+}
+
+.labelText {
+  margin: 0.5rem 0 0.5rem 0;
+  color: var(--clr-black);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* -------- Submit Button -------- */
+.submitBtn {
+  width: 30%;
+  margin-top: 1.5rem;
+  padding: 15px;
+  background: var(--clr-title);
+  color: var(--clr-quote);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  box-shadow: 0 0 10px var(--clr-shadow);
+}
+
+.centerButton {
+  text-align: center;
+}
+
+/* -------- Orders Table -------- */
+.ordersTableWrapper {
+  margin-top: 3rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  border-radius: 15px;
+  width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+.ordersTableWrapper h2 {
+  text-align: center;
+  color: var(--clr-title);
+  margin-bottom: 1rem;
+}
+
+.ordersTable {
+  width: max-content;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.ordersTable th,
+.ordersTable td {
+  border: 1px solid var(--clr-black);
+  padding: 10px;
+  text-align: center;
+}
+
+.ordersTable th {
+  background-color: var(--clr-brand);
+  color: var(--clr-quote);
+}
+
+/* -------- Row for ColorSelector + Specification -------- */
+.colorSpecRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* side by side */
+  gap: 25px;
+  align-items: stretch;
+  margin-top: 1rem;
+}
+
+.colorBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.specBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.specBox label {
+  margin-bottom: 0.5rem;
+  color: var(--clr-black);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.specBox textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid var(--clr-background);
+  outline: none;
+  resize: vertical;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+}
+
+/* -------- Responsive adjustments -------- */
+@media (max-width: 1024px) {
+  .orderFormContainer .formRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .colorSpecRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .orderFormContainer .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .colorSpecRow {
+    grid-template-columns: 1fr;
+  }
+
+  .submitBtn {
+    width: 80%;
+  }
+}
+
+/* Optional: textarea resize fix */
+.textareaField {
+  resize: vertical;
+}
+
+.previewTitle {
+  text-align: center;
+  color: var(--clr-title);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  /* background: #fff; */
+}
+
+.ordersTable th,
+.ordersTable td {
+  border: 1px solid var(--clr-black);
+  padding: 10px;
+  font-size: 0.95rem;
+}
+
+.editBtn {
+  background-color: var(--clr-error);
+  color: var(--clr-quote);
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  margin-left: 10px;
+}
+
+.editBtn:hover {
+  box-shadow: 0 0 10px var(--clr-shadow);
+}
+
+.error {
+  color: var(--clr-error);
+  font-size: 15px;
+  margin-top: 2px;
+  display: block;
+  width: 70%;
+}
